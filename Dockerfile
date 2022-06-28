@@ -63,7 +63,7 @@ RUN yum install -y centos-release-scl-rh && \
     rpm -V $INSTALL_PKGS && \
     yum -y clean all --enablerepo='*' && \
     
-    yum install -y GConf2 alsa-lib atk aktmm glibc cairo cups dbus libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget libgbm-dev
+    yum install -y GConf2 alsa-lib atk atkmm glibc cairo cups dbus expat fontconfig libgcc gdk-pixbuf2 glib2 gtk3 nspr pango libstdc++ libX11 libxcb libXcomposite libXcursor libXdamage libXext libXfixes libXi libXrandr libXrender libXtst ca-certificates liberation-fonts libappindicator nss nss-devel redhat-lsb xdg-utils wget mesa-libgbm mesa-libgbm-devel
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
