@@ -112,8 +112,7 @@ else
 
 fi
 
-pwd
-ls -la
+# Install Puppeteer v5.4.6
 node node_modules/puppeteer/install.js
 
 # Fix source directory permissions
