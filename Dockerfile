@@ -54,7 +54,9 @@ LABEL summary="$SUMMARY" \
 
 RUN yum install -y centos-release-scl-rh && \
     ( [ "rh-${NAME}${NODEJS_VERSION}" != "${NODEJS_SCL}" ] && yum remove -y ${NODEJS_SCL}\* || : ) && \
-    INSTALL_PKGS="rh-nodejs${NODEJS_VERSION}-npm rh-nodejs${NODEJS_VERSION}-nodejs-nodemon nss_wrapper" && \
+    INSTALL_PKGS="nss_wrapper" && \
+    # rh-nodejs${NODEJS_VERSION}-npm
+    # rh-nodejs${NODEJS_VERSION}-nodejs-nodemon 
     # rh-nodejs${NODEJS_VERSION} 
     ln -s /usr/lib/node_modules/nodemon/bin/nodemon.js /usr/bin/nodemon && \
     wget http://mirror.centos.org/centos/7/sclo/x86_64/rh/Packages/r/rh-nodejs12-nodejs-12.16.1-1.el7.x86_64.rpm && \
